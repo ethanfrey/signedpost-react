@@ -5,7 +5,7 @@ const NotFoundPage = () => {
   return (
     <div>
       <h4>
-        404 Page Not Found
+        What did you click on?  I guess I made a mistake :(
       </h4>
       <Link to="/"> Go back to homepage </Link>
     </div>
