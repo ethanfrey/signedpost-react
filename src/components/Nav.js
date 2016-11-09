@@ -14,15 +14,18 @@ import {AppBar, Tab, Tabs} from 'material-ui';
 class Nav extends React.Component {
   render() {
     return (
-      <AppBar
-        title="SignedPost"
-      >
-              <Tabs onChange={this.changeTab}>
+      <div>
+        <AppBar
+          title="SignedPost React Demo"
+          showMenuIconButton={false}
+        />
+        <Tabs onChange={this.changeTab}>
           <Tab value={0} label="Home" containerElement={<IndexLink to="/">Home</IndexLink>} />
-          <Tab value={1} label="About" containerElement={<Link to="/about">About</Link>} />
+          <Tab value={1} label="Users" containerElement={<Link to="/users">Users</Link>} />
+          <Tab value={2} label="About" containerElement={<Link to="/about">About</Link>} />
         </Tabs>
-        </AppBar>
-      );
+      </div>
+    );
   }
 }
 
