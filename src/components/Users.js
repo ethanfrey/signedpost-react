@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {Link} from 'react-router';
 import {List, ListItem, Badge} from 'material-ui';
 // import ActionGrade from 'material-ui/svg-icons/action/grade';
 
@@ -20,7 +21,11 @@ class Users extends React.Component {
     const {users} = this.props;
     console.log(users);
     const items = users.map(function (obj, idx) {
-      return (<ListItem primaryText={obj.name} key={idx} rightIcon={<Badge primary={true} badgeContent={obj.posts} />} />);
+      return (
+            <Link to={"/user/"+obj.id} key={idx}>
+              <ListItem primaryText={obj.name} rightIcon={<Badge primary={true} badgeContent={obj.posts} />} />
+            </Link>
+          );
     });
     console.log(items);
 
@@ -37,7 +42,7 @@ class Users extends React.Component {
 
 
 Users.propTypes = {
-  users: PropTypes.object.isRequired
+  users: PropTypes.array.isRequired
 };
 
 

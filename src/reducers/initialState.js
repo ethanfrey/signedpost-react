@@ -15,5 +15,30 @@ export default {
       name: "Will",
       posts: 0
     }
-  ]
+  ],
+  posts: {
+    abcdefg: [
+      {
+        id: "aaa",
+        number: 1,
+        title: "First Post",
+        content: "Some text here...."
+      },
+      {
+        id: "bbb",
+        number: 2,
+        title: "Second Post",
+        content: "Tell me something!"
+      }
+    ],
+    foobarbaz: [
+      {
+        id: "ccc",
+        number: 1,
+        title: "Foo bar bar",
+        content: "Boooorrrrinngg!"
+      }
+    ],
+    dingbooms: []
+  }
 };

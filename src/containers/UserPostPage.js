@@ -1,24 +1,30 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import Users from '../components/Users';
+import Posts from '../components/Posts';
 
-const UserPage = (props) => {
+const UserPostPage = (props) => {
+  console.log("userpostpage");
+  console.log(props);
   return (
-    <Users
-      users={props.users}
+    <Posts
+      posts={props.posts}
+      uid={props.params.userId}
     />
   );
 };
 
 
-UserPage.propTypes = {
+UserPostPage.propTypes = {
   // actions: PropTypes.object.isRequired,
-  users: PropTypes.array.isRequired
+  posts: PropTypes.object.isRequired,
+  params: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
+  console.log("state");
+  console.log(state);
   return {
-    users: state.users
+    posts: state.posts
   };
 }
 
@@ -31,4 +37,4 @@ function mapStateToProps(state) {
 export default connect(
   mapStateToProps
   // mapDispatchToProps
-)(UserPage);
+)(UserPostPage);
