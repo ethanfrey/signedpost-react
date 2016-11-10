@@ -3,8 +3,6 @@ import {connect} from 'react-redux';
 import Posts from '../components/Posts';
 
 const UserPostPage = (props) => {
-  console.log("userpostpage");
-  console.log(props);
   return (
     <Posts
       posts={props.posts}
@@ -21,8 +19,6 @@ UserPostPage.propTypes = {
 };
 
 function mapStateToProps(state) {
-  console.log("state");
-  console.log(state);
   return {
     posts: state.posts
   };

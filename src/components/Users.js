@@ -22,7 +22,7 @@ class Users extends React.Component {
     console.log(users);
     const items = users.map(function (obj, idx) {
       return (
-            <Link to={"/user/"+obj.id} key={idx}>
+            <Link to={"/users/"+obj.id+"/posts"} key={idx}>
               <ListItem primaryText={obj.name} rightIcon={<Badge primary={true} badgeContent={obj.posts} />} />
             </Link>
           );

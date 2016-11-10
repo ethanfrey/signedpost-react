@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import {Link} from 'react-router';
 import {List, ListItem, Badge} from 'material-ui';
 // import ActionGrade from 'material-ui/svg-icons/action/grade';
 
@@ -21,7 +22,14 @@ class Posts extends React.Component {
     const myposts = posts[uid];
     console.log(myposts);
     const items = myposts.map(function (obj, idx) {
-      return (<ListItem primaryText={" " + obj.title} key={idx} leftIcon={<Badge primary={true} badgeContent={obj.number} />} />);
+      return (
+        <Link to={"/users/"+uid+"/posts/"+obj.number} key={idx}>
+          <ListItem
+            leftIcon={<Badge primary={true} badgeContent={obj.number} />} >
+            &nbsp; &nbsp; {obj.title}
+          </ListItem>
+        </Link>
+        );
     });
 
     return (
