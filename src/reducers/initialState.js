@@ -1,19 +1,19 @@
 export default {
-  users: {
-  }
-  //   newMpg: '',
-  //   tradeMpg: '',
-  //   newPpg: '',
-  //   tradePpg: '',
-  //   milesDriven: '',
-  //   milesDrivenTimeframe: 'week',
-  //   displayResults: false,
-  //   dateModified: null,
-  //   necessaryDataIsProvidedToCalculateSavings: false,
-  //   savings: {
-  //     monthly: 0,
-  //     annual: 0,
-  //     threeYear: 0
-  //   }
-  // }
+  users: [
+    {
+      id: "abcdefg",
+      name: "John",
+      posts: 5
+    },
+    {
+      id: "foobarbaz",
+      name: "Jane",
+      posts: 17
+    },
+    {
+      id: "dingbooms",
+      name: "Will",
+      posts: 0
+    }
+  ]
 };

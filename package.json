@@ -29,6 +29,7 @@
   "author": "Ethan Frey",
   "license": "GPL-3.0",
   "dependencies": {
+    "fetch": "1.1.0",
     "material-ui": "0.16.1",
     "object-assign": "4.1.0",
     "react": "15.3.2",
