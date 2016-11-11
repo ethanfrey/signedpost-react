@@ -19,7 +19,6 @@ class Users extends React.Component {
 
   render() {
     const {users} = this.props;
-    console.log(users);
     const items = users.map(function (obj, idx) {
       return (
             <Link to={"/users/"+obj.id+"/posts"} key={idx}>
@@ -27,7 +26,6 @@ class Users extends React.Component {
             </Link>
           );
     });
-    console.log(items);
 
     return (
         <List style={listStyle}>

@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
-import {Badge, Paper} from 'material-ui';
+import {Link} from 'react-router';
+import {Paper} from 'material-ui';
 
 const style = {
   width: "80%",
@@ -21,15 +22,17 @@ class Post extends React.Component {
   }
 
   render() {
-    const {post} = this.props;
+    const {post, uid} = this.props;
     return (
         <Paper style={style} zDepth={2}>
           <h2>
-            <Badge primary={true} badgeContent={post.number} />
-            &nbsp; {post.title}
+            Post #{post.number}: {post.title}
           </h2>
           <p>
             {post.content}
+          </p>
+          <p>
+            <Link to={"/users/"+uid+"/posts"}>Back</Link>
           </p>
         </Paper>
     );
@@ -38,6 +41,7 @@ class Post extends React.Component {
 
 Post.propTypes = {
   post: PropTypes.object.isRequired,
+  uid: PropTypes.string.isRequired
 };
 
 

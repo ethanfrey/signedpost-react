@@ -4,9 +4,7 @@ import Users from '../components/Users';
 
 const UserPage = (props) => {
   return (
-    <Users
-      users={props.users}
-    />
+    <Users users={props.users} />
   );
 };
 

@@ -3,19 +3,18 @@ import {connect} from 'react-redux';
 import Post from '../components/Post';
 
 const PostPage = (props) => {
-  console.log(props);
   const uid = props.params.userId;
   const number = props.params.number;
   let posts = props.posts[uid];
-  console.log(posts);
   if (posts) {
     posts = posts.filter(p => (p.number == number));
   }
-  console.log(posts);
   if (posts) {
+    let post = posts[0];
     return (
       <Post
-        post={posts[0]}
+        post={post}
+        uid={uid}
       />
     );
   } else {

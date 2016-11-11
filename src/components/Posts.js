@@ -19,14 +19,11 @@ class Posts extends React.Component {
 
   render() {
     const {uid, posts} = this.props;
-    const myposts = posts[uid];
-    console.log(myposts);
-    const items = myposts.map(function (obj, idx) {
+    const items = posts.map(function (obj, idx) {
       return (
         <Link to={"/users/"+uid+"/posts/"+obj.number} key={idx}>
-          <ListItem
-            leftIcon={<Badge primary={true} badgeContent={obj.number} />} >
-            &nbsp; &nbsp; {obj.title}
+          <ListItem>
+            {obj.number}. {obj.title}
           </ListItem>
         </Link>
         );
