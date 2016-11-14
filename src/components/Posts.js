@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
-import {List, ListItem, Badge} from 'material-ui';
+import {List, ListItem} from 'material-ui';
 // import ActionGrade from 'material-ui/svg-icons/action/grade';
 
 const listStyle = {
