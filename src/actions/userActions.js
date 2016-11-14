@@ -38,7 +38,7 @@ export function loadUsers() {
   return function (dispatch) {
     dispatch(requestUsers());
 
-    return fetch(BASE_URL + "/users").
+    return fetch(BASE_URL + "/accounts").
       then(status).
       then(response => response.json()).
       then(json => dispatch(receiveUsers(json))).

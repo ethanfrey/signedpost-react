@@ -10,15 +10,9 @@ class UserPage extends React.Component {
     super(props);
     this.render = this.render.bind(this);
     this.componentWillMount = this.componentWillMount.bind(this);
-    this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
   }
 
   componentWillMount() {
-    const {actions} = this.props;
-    actions.loadUsers();
-  }
-
-  componentWillReceiveProps(/*nextProps*/) {
     const {actions} = this.props;
     actions.loadUsers();
   }
