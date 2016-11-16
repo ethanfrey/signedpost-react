@@ -19,6 +19,9 @@ class Posts extends React.Component {
 
   render() {
     const {uid, posts} = this.props;
+    if (!posts || posts.length == 0) {
+      return (<h2>No posts for this user</h2>);
+    }
     const items = posts.map(function (obj, idx) {
       return (
         <Link to={"/users/"+uid+"/posts/"+obj.number} key={idx}>
