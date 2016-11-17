@@ -8,6 +8,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import routes from './routes';
 import configureStore from './store/configureStore';
+import './styles/base.css';
 require('./favicon.ico'); // Tell webpack to load favicon.ico
 
 // Needed for onTouchTap
